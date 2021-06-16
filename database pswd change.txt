@@ -1,0 +1,22 @@
+***Change pswd of Sql Server In Xampp
+In Console application
+UPDATE mysql.user SET Password=PASSWORD('rdnc') WHERE User='root'; FLUSH PRIVILEGES;
+
+go to the xampp folder in C drive.
+
+look for the change the config.inc.php file with the new password and change the
+
+$cfg['Servers'][$i]['password'] = ''; to
+
+$cfg['Servers'][$i]['password'] = 'new_pswd';
+
+$cfg['Servers'][$i]['AllowNoPassword'] = true; to
+
+$cfg['Servers'][$i]['AllowNoPassword'] = false; then
+
+restart your mysql and apache in the control panel.
+
+
+***For Transferring database from ine system to other
+
+In PhPmyAdmin go to Export and export on one computer and then use import on another
